@@ -1,0 +1,640 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* CSS CODE */
+
+/* @font-face {
+    font-family: "Bebas Neue";
+    src: url(BebasNeue-Regular.woff) format(truetype);
+} */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(245, 245, 245);
+    font-size: 16px/28px;
+    font-family: arial, sans-serif;
+}
+header {
+    /* height: 40px; */
+    background-color: goldenrod;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    border-bottom: 3px solid silver;
+}
+header .time {
+    box-sizing: border-box;
+    margin: auto;
+    padding: 8px;
+    color: #fff;
+    width: 50%;
+    float: left;
+}
+header .sosmed {
+    box-sizing: border-box;
+    margin: auto;
+    padding: 8px;
+    color: #fff;
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+header img {
+    height: 20px;
+}
+.container-content h2 {
+    text-align: center;
+    padding: 25px 25px 20px 25px;
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 2px solid silver;
+    margin-bottom: 25px;
+}
+.container-content nav {
+    margin: 80px auto 15px auto;
+    width: 90%;
+    position: relative;
+    background-color: #eaeaea;
+    border-radius: 8px;
+}
+.container-content nav .logo img {
+    height: 35px;
+}
+.container-content nav .judul {
+    box-sizing: border-box;
+    padding: 15px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.container-content ul li {
+    display: inline-block;
+    padding: 8px 8px 35px 8px;
+    /* padding-bottom: 20px; */
+}
+.container-content ul li a {
+    text-decoration: none;
+    color: goldenrod;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 3px;
+}
+.container-content ul li a:hover {
+    color: #fff;
+    background-color: rgb(175, 131, 19);
+}
+.container-content main {
+    box-sizing: border-box;
+    margin: auto;
+    width: 90%;
+    position: relative;
+    background-color: #eaeaea;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.carousel {
+    box-sizing: border-box;
+    width: 40%;
+    padding: 20px;
+    float: left;
+}
+ul.slides {
+    display: block;
+    position: relative;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+ul.slides input {
+    display: none;
+}
+.slide-container {
+    display: block;
+}
+.slide-image {
+    margin: auto;
+    display: block;
+    position: absolute;
+    max-width: 95%;
+    max-height: 95%;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+}
+.slide-image img {
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    /* width: auto; */
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid silver;
+}
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 50px;
+    line-height: 100%;
+    color: #241e1e;
+}
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    /* padding: 0 15px; */
+    opacity: 0;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+.slide-image:hover + .carousel-controls label {
+    opacity: 0.5;
+}
+.carousel-controls label:hover {
+    opacity: 1;
+}
+.carousel-controls .prev-slide {
+    width: 50%;
+    text-align: left;
+    left: 20px;
+}
+.carousel-controls .next-slide {
+    width: 50%;
+    text-align: right;
+    right: 20px;
+}
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+input:checked + .slide-container .carousel-controls label {
+    display: block;
+}
+input:checked + .slide-container .nav label {
+    display: block;
+}
+.profile-lembaga {
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    width: 60%;
+    float: left;
+}
+.profile-lembaga h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+.profile-lembaga p {
+    padding-bottom: 12px;
+    font-size: 1.05rem;
+    line-height: 23px;
+    text-align: justify;
+}
+.profile-lembaga h4 {
+    padding-top: 20px;
+}
+.profile-lembaga img {
+    height: 15px;
+}
+.tab {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.tab button {
+    font-size: 1rem;
+    color: goldenrod;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.tab button:hover {
+    color: #fff;
+    background-color: rgb(175, 131, 19);
+}
+.tab button.active {
+    background-color: goldenrod;
+    font-weight: bolder;
+    color: #fff;
+}
+.tabcontent {
+    display: none;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.tabcontent.active {
+    display: block;
+}
+.tabcontent ol li {
+    font-size: 1rem;
+    padding: 5px 10px;
+    line-height: 23px;
+    list-style: active;
+    list-style-position: inside;
+    text-align: justify;
+}
+.tabcontent p {
+    font-size: 1rem;
+    padding: 5px 10px;
+    line-height: 23px;
+    text-align: justify;
+}
+.tabcontent img {
+    width: 85%;
+    padding: 10px;
+    padding-top: 20px;
+    margin: auto;
+}
+.tabcontent #pimpinan img {
+    width: 30%;
+    margin: auto;
+}
+.tabcontent.pimpinan {
+    display: flex;
+    justify-content: center;
+}
+.tabcontent iframe {
+    float: left;
+    padding: 10px;
+    width: 55%;
+    height: 450px;
+    border: none;
+}
+.tabcontent .lok {
+    float: left;
+    padding: 10px;
+    width: 40%;
+    line-height: 23px;
+    border: none;
+}
+#profile h4,
+#profile h5,
+#sertifikasi h4,
+#sertifikasi h5,
+#prodi h4,
+#prodi h5,
+#lain2 h4,
+#lain2 h5,
+#penulis h4,
+#penulis h5 {
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px;
+    line-height: 23px;
+}
+#sertifikasi p,
+#prodi p,
+#lain2 p,
+#penulis p {
+    text-align: justify;
+    font-size: 1rem;
+    padding: 10px;
+    line-height: 23px;
+}
+#profile .tabcontent img {
+    margin-top: 15px;
+}
+#sertifikasi .tabcontent img,
+#prodi .tabcontent img,
+#lain2 .tabcontent img {
+    margin-top: 15px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+#lain2 .tabcontent a {
+    text-decoration: none;
+    font-weight: bold;
+}
+footer {
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    position: relative;
+    background-color: #eaeaea;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 10px;
+    line-height: 20px;
+}
+#lain2 .tabcontent a,
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+}
+#lain2 .tabcontent a:hover,
+footer a:hover {
+    color: #241e1e;
+}
+#penulis iframe {
+    float: left;
+    padding: 10px;
+    width: 55%;
+    height: 450px;
+    border: none;
+}
+#penulis aside {
+    float: left;
+    width: 45%;
+}
+#penulis .mypic {
+    width: 35%;
+    float: left;
+}
+#penulis .mypic img {
+    padding: 10px;
+    border-radius: 5px;
+    /* width: 50%; */
+    margin: auto;
+}
+#penulis .aboutMe {
+    padding: 10px;
+}
+#penulis .aboutMe img {
+    height: 15px;
+}
+#penulis aside #pp {
+    float: left;
+    height: 120px;
+    width: 120px;
+}
+#penulis aside #pp img {
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    padding: 10px 0 0 10px;
+    /* border-radius: 5px; */
+}
+#penulis aside a {
+    text-decoration: none;
+    font-weight: bold;
+}
+#penulis aside a:hover {
+    color: #241e1e;
+}
+/* clear float nicholas gallagher */
+.cf:before,
+.cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+
+@media screen and (max-width: 960px) {
+    .carousel {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 576px) {
+    .tab {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 768px) {
+    footer {
+        font-size: small;
+    }
+    .container-content ul li a {
+        font-size: 0.9rem;
+    }
+    .container-content h2 {
+        font-size: 1.3rem;
+    }
+    #profile h4,
+    #profile h5,
+    #sertifikasi h4,
+    #sertifikasi h5,
+    #prodi h4,
+    #prodi h5 {
+        font-size: 1.1rem;
+    }
+    .profile-lembaga h3 {
+        font-size: 1.2rem;
+    }
+    .profile-lembaga p {
+        font-size: 1rem;
+    }
+    #penulis h4,
+    #penulis h5 {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .tab {
+        display: flex;
+        justify-content: space-around;
+    }
+    .tab button {
+        font-size: 0.8rem;
+        margin: 3px;
+    }
+    #sertifikasi .tabcontent img,
+    #prodi .tabcontent img,
+    #lain2 .tabcontent img {
+        width: 90%;
+    }
+    header .time {
+        font-size: small;
+    }
+    .container-content nav .logo img {
+        height: 20px;
+    }
+    .container-content nav .judul {
+        padding: 10px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .container-content ul li {
+        padding: 5px;
+    }
+    .profile-lembaga {
+        width: 100%;
+    }
+    .tabcontent img {
+        width: 100%;
+    }
+    .tabcontent #pimpinan img {
+        width: 100%;
+    }
+    .tabcontent iframe {
+        width: 100%;
+    }
+    .tabcontent .lok {
+        width: 100%;
+    }
+    #penulis iframe {
+        width: 100%;
+    }
+    #penulis aside {
+        width: 100%;
+    }
+}
