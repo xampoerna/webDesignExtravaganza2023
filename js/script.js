@@ -33,6 +33,25 @@ function updateDate() {
 updateDate();
 setInterval(refreshTime, 1000);
 
+// dropdown menu
+function showDropdown1() {
+    var dropdownContent = document.getElementById("dropdownContent1");
+    if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+    } else {
+        dropdownContent.style.display = "block";
+    }
+}
+
+function showDropdown2() {
+    var dropdownContent = document.getElementById("dropdownContent2");
+    if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+    } else {
+        dropdownContent.style.display = "block";
+    }
+}
+
 // carousel image
 var slideIndex = 1;
 showDivs(slideIndex);
