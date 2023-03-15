@@ -199,21 +199,64 @@ header img {
     font-size: 40px;
     font-weight: bold;
 }
+.dropdown1,
+.dropdown2 {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content1,
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 5px;
+}
+.show {
+    display: block;
+}
 .container-content ul li {
     display: inline-block;
     padding: 8px 8px 35px 8px;
     /* padding-bottom: 20px; */
 }
-.container-content ul li a {
+.container-content ul li a,
+.dropbtn1,
+.dropbtn2,
+.dropdown-content1 a,
+.dropdown-content2 a {
     text-decoration: none;
     color: goldenrod;
     font-weight: bold;
     padding: 5px;
     border-radius: 3px;
+    border: none;
 }
-.container-content ul li a:hover {
+.dropbtn1,
+.dropbtn2 {
+    background-color: #eaeaea;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.dropdown-content1 a,
+.dropdown-content2 a {
+    line-height: 23px;
+    display: block;
+}
+.container-content ul li a:hover,
+.dropbtn1:hover,
+.dropbtn2:hover,
+.dropdown-content1 a:hover,
+.dropdown-content2 a:hover {
     color: #fff;
     background-color: rgb(175, 131, 19);
+}
+.dropdown-content1,
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    z-index: 1;
 }
 .container-content main {
     box-sizing: border-box;
@@ -228,7 +271,7 @@ header img {
 .carousel {
     box-sizing: border-box;
     width: 40%;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     float: left;
 }
 ul.slides {
@@ -326,7 +369,7 @@ input:checked + .slide-container .nav label {
     box-sizing: border-box;
     left: 0;
     top: 0;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     width: 60%;
     float: left;
 }
@@ -479,11 +522,13 @@ footer {
     line-height: 20px;
 }
 #lain2 .tabcontent a,
+.source a,
 footer a {
     text-decoration: none;
     font-weight: bold;
 }
 #lain2 .tabcontent a:hover,
+.source a:hover,
 footer a:hover {
     color: #241e1e;
 }
@@ -511,7 +556,8 @@ footer a:hover {
 #penulis .aboutMe {
     padding: 10px;
 }
-#penulis .aboutMe img {
+#penulis .aboutMe img,
+.source img {
     height: 15px;
 }
 #penulis aside #pp {
@@ -534,6 +580,10 @@ footer a:hover {
 #penulis aside a:hover {
     color: #241e1e;
 }
+.source {
+    font-size: small;
+    padding-top: 15px;
+}
 /* clear float nicholas gallagher */
 .cf:before,
 .cf:after {
@@ -549,11 +599,11 @@ footer a:hover {
     *zoom: 1;
 }
 
-@media screen and (max-width: 960px) {
+/* @media screen and (max-width: 960px) {
     .carousel {
         width: 100%;
     }
-}
+} */
 @media screen and (max-width: 576px) {
     .tab {
         display: flex;
@@ -561,10 +611,17 @@ footer a:hover {
     }
 }
 @media screen and (max-width: 768px) {
+    .carousel {
+        width: 100%;
+    }
     footer {
         font-size: small;
     }
-    .container-content ul li a {
+    .container-content ul li a,
+    .dropbtn1,
+    .dropbtn2,
+    .dropdown-content1 a,
+    .dropdown-content2 a {
         font-size: 0.9rem;
     }
     .container-content h2 {
@@ -636,5 +693,16 @@ footer a:hover {
     }
     #penulis aside {
         width: 100%;
+    }
+    .carousel {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        bottom: 0;
+    }
+    .profile-lembaga {
+        position: relative;
+        padding-top: 0;
+        margin-top: 0;
+        top: 0;
     }
 }
