@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>WEB DESIGN | OSAMA</title>
+        <title>WEB DESIGN EXTRAVAGANZA 2023 | OSAMA</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="css/style.css" />
     </head>
@@ -40,7 +40,6 @@
 
             <div class="container-content">
                 <!-- nav start -->
-
                 <nav>
                     <span class="logo"
                         ><a href="https://www.piksi.ac.id/" target="_blank" rel="noopener noreferrer"> <img src="images/logo.png" alt="Logo PPG" srcset="" /> </a>
@@ -48,9 +47,26 @@
                     <h1 class="judul">POLITEKNIK PIKSI GANESHA BANDUNG</h1>
                     <ul>
                         <li><a href="#profile">PROFILE</a></li>
-                        <li><a href="#sertifikasi">SERTIFIKASI</a></li>
+                        <div class="dropdown1">
+                            <button onclick="showDropdown1()" class="dropbtn1">SERTIFIKASI<span>&blacktriangledown;</span></button>
+                            <div id="dropdownContent1" class="dropdown-content1">
+                                <a href="#tab5" class="tablinks" onclick="openTab(event, 'tab5')">Microsoft</a>
+                                <a href="#tab6" class="tablinks" onclick="openTab(event, 'tab6')">BNSP</a>
+                                <a href="#tab7" class="tablinks" onclick="openTab(event, 'tab7')">LSP</a>
+                            </div>
+                        </div>
                         <li><a href="#prodi">PROGRAM STUDI</a></li>
-                        <li><a href="#lain2">INFORMASI</a></li>
+                        <div class="dropdown2">
+                            <button onclick="showDropdown2()" class="dropbtn2">INFORMASI<span>&blacktriangledown;</span></button>
+                            <div id="dropdownContent2" class="dropdown-content2">
+                                <a href="#tab21" class="tablinks" onclick="openTab(event, 'tab21')">DOSEN</a>
+                                <a href="#tab22" class="tablinks" onclick="openTab(event, 'tab22')">KURIKULUM</a>
+                                <a href="#tab23" class="tablinks" onclick="openTab(event, 'tab23')">KALDIK</a>
+                                <a href="#tab24" class="tablinks" onclick="openTab(event, 'tab24')">BAPS</a>
+                                <a href="#tab25" class="tablinks" onclick="openTab(event, 'tab25')">PEDOMAN</a>
+                                <a href="#tab26" class="tablinks" onclick="openTab(event, 'tab26')">NILAI</a>
+                            </div>
+                        </div>
                         <li><a href="#penulis">PENULIS</a></li>
                     </ul>
                 </nav>
@@ -58,7 +74,7 @@
 
                 <!-- main content start -->
                 <main>
-                    <div class="content cf">
+                    <div class="content cf" id="content">
                         <div id="profile">
                             <h2>PROFILE POLITEKNIK PIKSI GANESHA BANDUNG</h2>
                             <div class="carousel">
@@ -108,30 +124,32 @@
                                 </ul>
                             </div>
                             <div class="profile-lembaga">
-                                <h3>POLITEKNIK PIKSI GANESHA BANDUNG</h3>
-                                <p>
-                                    Politeknik Piksi Ganesha Bandung atau Kampus Ungu, adalah perguruan tinggi swasta yang terdapat di kota Bandung, Jawa Barat, Indonesia. Politeknik Piksi Ganesha Bandung berafiliasi dengan Politeknik Dharma Patria
-                                    Kebumen.
-                                </p>
-                                <p>
-                                    Politeknik Piksi Ganesha Bandung memiliki fasilitas penunjang yang lengkap untuk mahasiswanya, semua ruangan yang meliputi kelas, laboratorium dan perpustakaan menggunakan (Air Conditioner) atau Penyejuk udara dan
-                                    menggunakan alat pemantau Televisi sirkuit tertutup.
-                                </p>
-                                <p>
-                                    Temukan kami:
-                                    <span
-                                        ><a href="https://api.whatsapp.com/send?phone=628156027000" target="_blank" rel="noopener noreferrer"> <img src="images/icon/whatsapp.png" alt="ppgWhatsapp" srcset="" /></a>
-                                    </span>
-                                    <span
-                                        ><a href="https://instagram.com/piksi_ganesha/" target="_blank" rel="noopener noreferrer"> <img src="images/icon/instagram.png" alt="ppgInstagram" srcset="" /></a>
-                                    </span>
-                                    <span
-                                        ><a href="https://www.facebook.com/piksiganeshabdg1" target="_blank" rel="noopener noreferrer"><img src="images/icon/facebook.png" alt="ppgFacebook" srcset="" /></a>
-                                    </span>
-                                    <span
-                                        ><a href="https://www.youtube.com/channel/UCD8IxCl1KY3fvkR0b9BOiqQ" target="_blank" rel="noopener noreferrer"><img src="images/icon/youtube.png" alt="ppgYoutube" srcset="" /></a>
-                                    </span>
-                                </p>
+                                <article>
+                                    <h3>POLITEKNIK PIKSI GANESHA BANDUNG</h3>
+                                    <p>
+                                        Politeknik Piksi Ganesha Bandung atau Kampus Ungu, adalah perguruan tinggi swasta yang terdapat di kota Bandung, Jawa Barat, Indonesia. Politeknik Piksi Ganesha Bandung berafiliasi dengan Politeknik Dharma
+                                        Patria Kebumen.
+                                    </p>
+                                    <p>
+                                        Politeknik Piksi Ganesha Bandung memiliki fasilitas penunjang yang lengkap untuk mahasiswanya, semua ruangan yang meliputi kelas, laboratorium dan perpustakaan menggunakan (Air Conditioner) atau Penyejuk udara
+                                        dan menggunakan alat pemantau Televisi sirkuit tertutup.
+                                    </p>
+                                    <p>
+                                        Temukan kami:
+                                        <span
+                                            ><a href="https://api.whatsapp.com/send?phone=628156027000" target="_blank" rel="noopener noreferrer"> <img src="images/icon/whatsapp.png" alt="ppgWhatsapp" srcset="" /></a>
+                                        </span>
+                                        <span
+                                            ><a href="https://instagram.com/piksi_ganesha/" target="_blank" rel="noopener noreferrer"> <img src="images/icon/instagram.png" alt="ppgInstagram" srcset="" /></a>
+                                        </span>
+                                        <span
+                                            ><a href="https://www.facebook.com/piksiganeshabdg1" target="_blank" rel="noopener noreferrer"><img src="images/icon/facebook.png" alt="ppgFacebook" srcset="" /></a>
+                                        </span>
+                                        <span
+                                            ><a href="https://www.youtube.com/channel/UCD8IxCl1KY3fvkR0b9BOiqQ" target="_blank" rel="noopener noreferrer"><img src="images/icon/youtube.png" alt="ppgYoutube" srcset="" /></a>
+                                        </span>
+                                    </p>
+                                </article>
                             </div>
                             <br /><br /><br /><br /><br />
                             <div class="tab-active">
@@ -142,19 +160,21 @@
                                     <button class="tablinks" onclick="openTab(event, 'tab4')">Kunjungi Kami</button>
                                 </div>
                                 <div id="tab1" class="tabcontent">
-                                    <h4>Visi & Misi Politeknik Piksi Ganesha Bandung</h4>
-                                    <h5>Visi</h5>
-                                    <p>Menjadi perguruan tinggi vokasi unggulan yang mampu menciptakan sumber daya manusia profesional di Indonesia pada tahun 2025.</p>
-                                    <h5>Misi</h5>
-                                    <ol>
-                                        <li>
-                                            Menyelenggarakan pendidikan yang unggul dan profesional berbasis skills (keterampilan) sesuai dengan kebutuhan dan tuntutan dunia usaha serta industri melalui uji kompetensi dan sertifikasi berstandar
-                                            nasional maupun internasional.
-                                        </li>
-                                        <li>Menyelenggarakan sistem pendidikan yang unggul dan profesional mengacu pada KKNI (Kerangka Kualifikasi Nasional Indonesia).</li>
-                                        <li>Menyelenggarakan penelitian dan pengabdian kepada masyarakat yang unggul dan profesional, menjunjung tinggi karakter dan wawasan nilai-nilai luhur bangsa.</li>
-                                        <li>Menyelenggarakan kemitraan dan kerjasama yang unggul dan profesional dengan dunia usaha dan industri bebasis link and match baik dalam maupun luar negeri.</li>
-                                    </ol>
+                                    <article>
+                                        <h4>Visi & Misi Politeknik Piksi Ganesha Bandung</h4>
+                                        <h5>Visi</h5>
+                                        <p>Menjadi perguruan tinggi vokasi unggulan yang mampu menciptakan sumber daya manusia profesional di Indonesia pada tahun 2025.</p>
+                                        <h5>Misi</h5>
+                                        <ol>
+                                            <li>
+                                                Menyelenggarakan pendidikan yang unggul dan profesional berbasis skills (keterampilan) sesuai dengan kebutuhan dan tuntutan dunia usaha serta industri melalui uji kompetensi dan sertifikasi berstandar
+                                                nasional maupun internasional.
+                                            </li>
+                                            <li>Menyelenggarakan sistem pendidikan yang unggul dan profesional mengacu pada KKNI (Kerangka Kualifikasi Nasional Indonesia).</li>
+                                            <li>Menyelenggarakan penelitian dan pengabdian kepada masyarakat yang unggul dan profesional, menjunjung tinggi karakter dan wawasan nilai-nilai luhur bangsa.</li>
+                                            <li>Menyelenggarakan kemitraan dan kerjasama yang unggul dan profesional dengan dunia usaha dan industri bebasis link and match baik dalam maupun luar negeri.</li>
+                                        </ol>
+                                    </article>
                                 </div>
                                 <div id="tab2" class="tabcontent">
                                     <h4>Struktur Kepemimpinan</h4>
@@ -177,31 +197,35 @@
                                         referrerpolicy="no-referrer-when-downgrade"
                                     ></iframe>
                                     <div class="lok">
-                                        <div class="kampus">
-                                            <h5>Kampus A - Fakultas Ekonomi dan Bisnis</h5>
-                                            <p>Jl. Gatot Subroto No.301, Maleer, Kec. Batununggal, Kota Bandung, Jawa Barat 40274</p>
-                                            <p>piksiganeshaonline@gmail.com</p>
-                                            <p>(022) 87340030</p>
-                                        </div>
-                                        <hr />
-                                        <div class="kampus">
-                                            <h5>Kampus B [Fakultas Kesehatan] dan Kampus C [Fakultas IT]</h5>
-                                            <p>Jl. Gatot Subroto No.335, Gumuruh, Kec. Batununggal, Kota Bandung, Jawa Barat 40274</p>
-                                            <p>piksiganeshaonline@gmail.com</p>
-                                            <p>(022) 87340030</p>
-                                        </div>
+                                        <article>
+                                            <div class="kampus">
+                                                <h5>Kampus A - Fakultas Ekonomi dan Bisnis</h5>
+                                                <p>Jl. Gatot Subroto No.301, Maleer, Kec. Batununggal, Kota Bandung, Jawa Barat 40274</p>
+                                                <p>piksiganeshaonline@gmail.com</p>
+                                                <p>(022) 87340030</p>
+                                            </div>
+                                            <hr />
+                                            <div class="kampus">
+                                                <h5>Kampus B [Fakultas Kesehatan] dan Kampus C [Fakultas IT]</h5>
+                                                <p>Jl. Gatot Subroto No.335, Gumuruh, Kec. Batununggal, Kota Bandung, Jawa Barat 40274</p>
+                                                <p>piksiganeshaonline@gmail.com</p>
+                                                <p>(022) 87340030</p>
+                                            </div>
+                                        </article>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div id="sertifikasi">
-                            <h2>SERTIFIKASI POLITEKNIK PIKSI GANESHA BANDUNG</h2>
-                            <h4>Sertifikasi (Nasional - Internasional)</h4>
-                            <p>
-                                Semua lulusan Politeknik Piksi Ganesha dibekali dengan sertifikat bersekala Nasional dan Internasional karena bagi perusahaan sampai sekarang sertifikasi menjadi sangat penting, ini menjadi bukti bahwa Anda benar-benar
-                                mempunyai kemampuan dalam mengoperasikan komputer. Dengan pertimbangan tersebut Politeknik Piksi Ganesha telah memiliki program sertifikasi Nasional dan Internasional, diantaranya :
-                            </p>
+                            <article>
+                                <h2>SERTIFIKASI POLITEKNIK PIKSI GANESHA BANDUNG</h2>
+                                <h4>Sertifikasi (Nasional - Internasional)</h4>
+                                <p>
+                                    Semua lulusan Politeknik Piksi Ganesha dibekali dengan sertifikat bersekala Nasional dan Internasional karena bagi perusahaan sampai sekarang sertifikasi menjadi sangat penting, ini menjadi bukti bahwa Anda
+                                    benar-benar mempunyai kemampuan dalam mengoperasikan komputer. Dengan pertimbangan tersebut Politeknik Piksi Ganesha telah memiliki program sertifikasi Nasional dan Internasional, diantaranya :
+                                </p>
+                            </article>
                             <div class="tab-active">
                                 <div class="tab">
                                     <button class="tablinks" onclick="openTab(event, 'tab5')">Microsoft</button>
@@ -231,9 +255,14 @@
                             </div>
                         </div>
                         <div id="prodi">
-                            <h2>PROGRAM STUDI POLITEKNIK PIKSI GANESHA BANDUNG</h2>
-                            <h4>FAKULTAS - PROGRAM STUDI</h4>
-                            <p>Politeknik Piksi Ganesha Bandung memiliki 3 fakultas, yakni: <strong>Fakultas Ekonomi dan Bisnis, IT dan Komputer, dan Fakultas Kesehatan.</strong> Berikut program studi yang ada di Politeknik Piksi Ganesha Bandung.</p>
+                            <article>
+                                <h2>PROGRAM STUDI POLITEKNIK PIKSI GANESHA BANDUNG</h2>
+                                <h4>FAKULTAS - PROGRAM STUDI</h4>
+                                <p>
+                                    Politeknik Piksi Ganesha Bandung memiliki 3 fakultas, yakni: <strong>Fakultas Ekonomi dan Bisnis, IT dan Komputer, dan Fakultas Kesehatan.</strong> Berikut program studi yang ada di Politeknik Piksi Ganesha
+                                    Bandung.
+                                </p>
+                            </article>
                             <div class="tab-active">
                                 <div class="tab">
                                     <button class="tablinks" onclick="openTab(event, 'tab8')">AKE</button>
@@ -251,212 +280,242 @@
                                     <button class="tablinks" onclick="openTab(event, 'tab20')">MIK</button>
                                 </div>
                                 <div id="tab8" class="tabcontent">
-                                    <h4>ADMINISTRASI KEUANGAN (AKE) - D3</h4>
-                                    <p>(Terakreditasi “A”)</p>
-                                    <p>Ketua Program Studi : EUIS HERNAWATI, S.E., M.M.</p>
-                                    <p>Sekretaris Program Studi : DIAN CANDRA FATIHAH, S.P., M.M</p>
-                                    <h5>Visi</h5>
-                                    <p>Menjadi program studi unggulan dalam menghasilkan sumber daya manusia yang profesional dalam bidang administrasi keuangan di Indonesia pada tahun 2025.</p>
-                                    <h5>Misi</h5>
-                                    <ol>
-                                        <li>Menyelenggarakan pendidikan berbasis kompetensi dalam bidang administrasi, akuntansi dan keuangan sesuai dengan Standar Kerangka Kualifaikasi Nasional Indonesia (SKKNI).</li>
-                                        <li>Melakukan penelitian dan pengabdian masyarakat yang bermanfaat dan relevan dengan bidang administrasi keuangan.</li>
-                                        <li>Menjalin kerjasama dengan dunia usaha dan dunia industri dalam pemenuhan kebutuhan kerja dalam bidang admininistrasi keuangan.</li>
-                                    </ol>
+                                    <article>
+                                        <h4>ADMINISTRASI KEUANGAN (AKE) - D3</h4>
+                                        <p>(Terakreditasi “A”)</p>
+                                        <p>Ketua Program Studi : EUIS HERNAWATI, S.E., M.M.</p>
+                                        <p>Sekretaris Program Studi : DIAN CANDRA FATIHAH, S.P., M.M</p>
+                                        <h5>Visi</h5>
+                                        <p>Menjadi program studi unggulan dalam menghasilkan sumber daya manusia yang profesional dalam bidang administrasi keuangan di Indonesia pada tahun 2025.</p>
+                                        <h5>Misi</h5>
+                                        <ol>
+                                            <li>Menyelenggarakan pendidikan berbasis kompetensi dalam bidang administrasi, akuntansi dan keuangan sesuai dengan Standar Kerangka Kualifaikasi Nasional Indonesia (SKKNI).</li>
+                                            <li>Melakukan penelitian dan pengabdian masyarakat yang bermanfaat dan relevan dengan bidang administrasi keuangan.</li>
+                                            <li>Menjalin kerjasama dengan dunia usaha dan dunia industri dalam pemenuhan kebutuhan kerja dalam bidang admininistrasi keuangan.</li>
+                                        </ol>
+                                    </article>
                                     <img src="images/akred-ake.jpeg" alt="akred-ake" />
                                 </div>
                                 <div id="tab9" class="tabcontent">
-                                    <h4>KOMPUTERISASI AKUNTANSI (KAT) - D4</h4>
-                                    <p>(Terakreditasi “A”)</p>
-                                    <p>Ketua Program Studi : PERWITO, S.E., M.M</p>
-                                    <p>Sekretaris Program Studi : KARYADI, S.E., M.M</p>
-                                    <h5>Visi</h5>
-                                    <p>Menjadi Program Studi Unggulan yang menghasilkan Sumber Daya Manusia Profesional dalam bidang Komputerisasi Akuntansi di Indonesia pada Tahun 2025.</p>
-                                    <h5>Misi</h5>
-                                    <ol>
-                                        <li>Menyelenggarakan proses pembelajaran yang berkualitas dan terfokus pada pengelolaan akutansi keuangan, sistem informasi akuntansi, dan perancagan sistem informasi akuntansi.</li>
-                                        <li>Menyelenggarakan Penelitian dan Pengabdian Pada Masyarakat yang selaras dengan keahlian akuntasi keuangan, perancangan dan pengembangan sistem informasi akuntansi.</li>
-                                        <li>Memberikan bekal ilmu yang berkaitan dengan etika profesi dan jiwa technopreneurship.</li>
-                                        <li>Melakukan kerjasama dengan institusi dan industri dalam dan luar negeri dalam bidang pendidikan dan penelitian.</li>
-                                    </ol>
+                                    <article>
+                                        <h4>KOMPUTERISASI AKUNTANSI (KAT) - D4</h4>
+                                        <p>(Terakreditasi “A”)</p>
+                                        <p>Ketua Program Studi : PERWITO, S.E., M.M</p>
+                                        <p>Sekretaris Program Studi : KARYADI, S.E., M.M</p>
+                                        <h5>Visi</h5>
+                                        <p>Menjadi Program Studi Unggulan yang menghasilkan Sumber Daya Manusia Profesional dalam bidang Komputerisasi Akuntansi di Indonesia pada Tahun 2025.</p>
+                                        <h5>Misi</h5>
+                                        <ol>
+                                            <li>Menyelenggarakan proses pembelajaran yang berkualitas dan terfokus pada pengelolaan akutansi keuangan, sistem informasi akuntansi, dan perancagan sistem informasi akuntansi.</li>
+                                            <li>Menyelenggarakan Penelitian dan Pengabdian Pada Masyarakat yang selaras dengan keahlian akuntasi keuangan, perancangan dan pengembangan sistem informasi akuntansi.</li>
+                                            <li>Memberikan bekal ilmu yang berkaitan dengan etika profesi dan jiwa technopreneurship.</li>
+                                            <li>Melakukan kerjasama dengan institusi dan industri dalam dan luar negeri dalam bidang pendidikan dan penelitian.</li>
+                                        </ol>
+                                    </article>
                                     <img src="images/akred-kat.jpeg" alt="akred-kat" />
                                 </div>
                                 <div id="tab10" class="tabcontent">
-                                    <h4>BISNIS DIGITAL (BDI) - D4</h4>
-                                    <h5>Visi</h5>
-                                    <p>Menjadi program studi dalam pengembangan teknik produksi platform media digital berbasis entrepreneurship di Indonesia pada tahun 2030.</p>
-                                    <h5>Misi</h5>
-                                    <ol>
-                                        <li>Menyelenggarakan pendidikan bidang komputerisasi akuntansi yang berkualitas dan fokus pada bidang Techno-Preneurship berbasis Digital.</li>
-                                        <li>Menyelenggarakan penelitian dan pengabdian pada masyarakat yang bermanfaat dan relevan dengan bidang Techno-Preneurship berbasis Digital.</li>
-                                        <li>Menjalin kemitraan dan kerjasama dengan institusi dan industri jasa dan manufaktur dalam penguatan lulusan yang profesional di Indonesia.</li>
-                                    </ol>
+                                    <article>
+                                        <h4>BISNIS DIGITAL (BDI) - D4</h4>
+                                        <h5>Visi</h5>
+                                        <p>Menjadi program studi dalam pengembangan teknik produksi platform media digital berbasis entrepreneurship di Indonesia pada tahun 2030.</p>
+                                        <h5>Misi</h5>
+                                        <ol>
+                                            <li>Menyelenggarakan pendidikan bidang komputerisasi akuntansi yang berkualitas dan fokus pada bidang Techno-Preneurship berbasis Digital.</li>
+                                            <li>Menyelenggarakan penelitian dan pengabdian pada masyarakat yang bermanfaat dan relevan dengan bidang Techno-Preneurship berbasis Digital.</li>
+                                            <li>Menjalin kemitraan dan kerjasama dengan institusi dan industri jasa dan manufaktur dalam penguatan lulusan yang profesional di Indonesia.</li>
+                                        </ol>
+                                    </article>
                                 </div>
                                 <div id="tab11" class="tabcontent">
-                                    <h4>MANAJEMEN INFORMATIKA (MIF) - D3</h4>
-                                    <p>(Terakreditasi “B”)</p>
-                                    <p>Ketua Program Studi : RINI TISNAWATI, S.KOM., M.T., MTA</p>
-                                    <p>Sekretaris Program Studi : ARDI TARYANTO, S.SI., M.M</p>
-                                    <h5>Visi</h5>
-                                    <p>Menjadi program studi yang mampu menghasilkan sumber daya manusia yang profesional dalam informatika di Indonesia pada tahun 2025.</p>
-                                    <h5>Misi</h5>
-                                    <ol>
-                                        <li>Menyelenggarakan pendidikan yang berkualitas di bidang informatika sesuai dengan Standar Kerangka Kualifikasi Nasional Indonesia (SKKNI).</li>
-                                        <li>Menyelenggarakan penelitian dan pengabdian pada masyarakat yang bermanfaat dan relevan dengan bidang informatika.</li>
-                                        <li>Menjalin kerjasama dengan dunia usaha dan industri di bidang informatika baik regional maupun nasional.</li>
-                                    </ol>
+                                    <article>
+                                        <h4>MANAJEMEN INFORMATIKA (MIF) - D3</h4>
+                                        <p>(Terakreditasi “B”)</p>
+                                        <p>Ketua Program Studi : RINI TISNAWATI, S.KOM., M.T., MTA</p>
+                                        <p>Sekretaris Program Studi : ARDI TARYANTO, S.SI., M.M</p>
+                                        <h5>Visi</h5>
+                                        <p>Menjadi program studi yang mampu menghasilkan sumber daya manusia yang profesional dalam informatika di Indonesia pada tahun 2025.</p>
+                                        <h5>Misi</h5>
+                                        <ol>
+                                            <li>Menyelenggarakan pendidikan yang berkualitas di bidang informatika sesuai dengan Standar Kerangka Kualifikasi Nasional Indonesia (SKKNI).</li>
+                                            <li>Menyelenggarakan penelitian dan pengabdian pada masyarakat yang bermanfaat dan relevan dengan bidang informatika.</li>
+                                            <li>Menjalin kerjasama dengan dunia usaha dan industri di bidang informatika baik regional maupun nasional.</li>
+                                        </ol>
+                                    </article>
                                     <img src="images/akred-mif3.jpeg" alt="akred-mif3" />
                                 </div>
                                 <div id="tab12" class="tabcontent">
-                                    <h4>TEKNIK KOMPUTER (TIK) - D3</h4>
-                                    <p>(Terakreditasi “B”)</p>
-                                    <p>Ketua Program Studi : SELIWATI, S.KOM., M.KOM</p>
-                                    <p>Sekretaris Program Studi : ARDELIA ASTRIANY R, S.PD., M.M</p>
-                                    <h5>Visi</h5>
-                                    <p>Menjadi program studi yang menghasilkan lulusan profesional di bidang teknik komputer sesuai dengan kebutuhan industri di Indonesia pada tahun 2025.</p>
-                                    <h5>Misi</h5>
-                                    <ol>
-                                        <li>Menyelenggarakan pendidikan yang berkualitas di bidang teknik komputer sesuai dengan Standar Kerangka Kualifikasi Nasional Indonesia (SKKNI).</li>
-                                        <li>Melaksanakan penelitian dan pengabdian masyarakat yang bermanfaat dan relevan dengan bidang teknik komputer.</li>
-                                        <li>Menjalin kerjasama dengan dunia usaha dan industri di bidang teknik komputer</li>
-                                    </ol>
-                                    <h5>Tujuan Prodi Teknik Komputer</h5>
-                                    <p>Untuk mendukung visi dan misi Prodi Teknik Komputer, perlu dilakukannya beberapa tujuan yaitu :</p>
-                                    <ol>
-                                        <li>Menghasilkan lulusan yang memiliki kompetensi di bidang mekatronika berbasis teknik komputer sesuai dengan KKNI.</li>
-                                        <li>Menghasilkan lulusan yang mampu merancang, membangun, dan mengimplementasikan teknologi komputer sesuai dengan perkembangan teknologi industri dan berguna di masyarakat.</li>
-                                        <li>Menghasilkan lulusan yang dapat memanfaatkan dan mengembangkan keilmuan yang berguna bagi masyarakat.</li>
-                                        <li>Menghasilkan karya ilmiah di bidang mekatronika berbasis teknik komputer yang bermanfaat bagi masyarakat sesuai dengan kemajuan Ilmu Pengetahuan dan Teknologi.</li>
-                                        <li>Menghasilkan lulusan yang siap bekerja di dunia usaha dan industri di bidang teknologi komputer.</li>
-                                    </ol>
+                                    <article>
+                                        <h4>TEKNIK KOMPUTER (TIK) - D3</h4>
+                                        <p>(Terakreditasi “B”)</p>
+                                        <p>Ketua Program Studi : SELIWATI, S.KOM., M.KOM</p>
+                                        <p>Sekretaris Program Studi : ARDELIA ASTRIANY R, S.PD., M.M</p>
+                                        <h5>Visi</h5>
+                                        <p>Menjadi program studi yang menghasilkan lulusan profesional di bidang teknik komputer sesuai dengan kebutuhan industri di Indonesia pada tahun 2025.</p>
+                                        <h5>Misi</h5>
+                                        <ol>
+                                            <li>Menyelenggarakan pendidikan yang berkualitas di bidang teknik komputer sesuai dengan Standar Kerangka Kualifikasi Nasional Indonesia (SKKNI).</li>
+                                            <li>Melaksanakan penelitian dan pengabdian masyarakat yang bermanfaat dan relevan dengan bidang teknik komputer.</li>
+                                            <li>Menjalin kerjasama dengan dunia usaha dan industri di bidang teknik komputer</li>
+                                        </ol>
+                                        <h5>Tujuan Prodi Teknik Komputer</h5>
+                                        <p>Untuk mendukung visi dan misi Prodi Teknik Komputer, perlu dilakukannya beberapa tujuan yaitu :</p>
+                                        <ol>
+                                            <li>Menghasilkan lulusan yang memiliki kompetensi di bidang mekatronika berbasis teknik komputer sesuai dengan KKNI.</li>
+                                            <li>Menghasilkan lulusan yang mampu merancang, membangun, dan mengimplementasikan teknologi komputer sesuai dengan perkembangan teknologi industri dan berguna di masyarakat.</li>
+                                            <li>Menghasilkan lulusan yang dapat memanfaatkan dan mengembangkan keilmuan yang berguna bagi masyarakat.</li>
+                                            <li>Menghasilkan karya ilmiah di bidang mekatronika berbasis teknik komputer yang bermanfaat bagi masyarakat sesuai dengan kemajuan Ilmu Pengetahuan dan Teknologi.</li>
+                                            <li>Menghasilkan lulusan yang siap bekerja di dunia usaha dan industri di bidang teknologi komputer.</li>
+                                        </ol>
+                                    </article>
                                     <img src="images/akred-tik.jpeg" alt="akred-tik" />
                                 </div>
                                 <div id="tab13" class="tabcontent">
-                                    <h4>PRODUKSI MEDIA (PME) - D4</h4>
-                                    <h5>Visi</h5>
-                                    <p>Menjadi program studi dalam pengembangan teknik produksi platform media digital berbasis entrepreneurship di Indonesia pada tahun 2030.</p>
-                                    <h5>Misi</h5>
-                                    <ol>
-                                        <li>Menyelenggarakan pendidikan bidang manajemen produksi media berbasis digital yang berkualitas dan profesional.</li>
-                                        <li>Melaksanakan penelitian dan pengabdian pada masyarakat yang bermanfaat dan relevan dengan bidang produksi media berbasis digital.</li>
-                                        <li>Menjalin kemitraan dan kerjasama penguatan pendidikan dan lulusan dalam bidang bidang produksi media berbasis digital.</li>
-                                    </ol>
+                                    <article>
+                                        <h4>PRODUKSI MEDIA (PME) - D4</h4>
+                                        <h5>Visi</h5>
+                                        <p>Menjadi program studi dalam pengembangan teknik produksi platform media digital berbasis entrepreneurship di Indonesia pada tahun 2030.</p>
+                                        <h5>Misi</h5>
+                                        <ol>
+                                            <li>Menyelenggarakan pendidikan bidang manajemen produksi media berbasis digital yang berkualitas dan profesional.</li>
+                                            <li>Melaksanakan penelitian dan pengabdian pada masyarakat yang bermanfaat dan relevan dengan bidang produksi media berbasis digital.</li>
+                                            <li>Menjalin kemitraan dan kerjasama penguatan pendidikan dan lulusan dalam bidang bidang produksi media berbasis digital.</li>
+                                        </ol>
+                                    </article>
                                 </div>
                                 <div id="tab14" class="tabcontent">
-                                    <h4>MANAJEMEN INFORMATIKA (MIF) - D4</h4>
-                                    <p>(Terakreditasi “B”)</p>
-                                    <p>Ketua Program Studi : RINI SUWARTIKA KUSUMADIARTI, S.KOM., M.KOM., MTA</p>
-                                    <p>Sekretaris Program Studi : RINA KURNIAWATI, S.KOM., M.T., MTA</p>
-                                    <h5>Visi</h5>
-                                    <p>Menjadi program studi yang mampu menghasilkan sumber daya manusia yang profesional dalam bidang Manajemen Sistem Informasi di Indonesia pada tahun 2025.</p>
-                                    <h5>Misi</h5>
-                                    <ol>
-                                        <li>Menyelenggarakan pendidikan yang berkualitas di bidang Manajemen Sistem Informasi berbasis Desktop dan Web sesuai dengan Standar Kerangka Kualifikasi Nasional Indonesia (SKKNI).</li>
-                                        <li>Melaksanakan penelitian dan pengabdian pada masyarakat yang bermanfaat dan relevan dengan bidang manajemen sistem informasi.</li>
-                                        <li>Menjalin kemitraan dan kerjasama dengan dunia usaha dan industri dalam bidang Manajemen Sistem Informasi untuk penguatan lulusan.</li>
-                                    </ol>
+                                    <article>
+                                        <h4>MANAJEMEN INFORMATIKA (MIF) - D4</h4>
+                                        <p>(Terakreditasi “B”)</p>
+                                        <p>Ketua Program Studi : RINI SUWARTIKA KUSUMADIARTI, S.KOM., M.KOM., MTA</p>
+                                        <p>Sekretaris Program Studi : RINA KURNIAWATI, S.KOM., M.T., MTA</p>
+                                        <h5>Visi</h5>
+                                        <p>Menjadi program studi yang mampu menghasilkan sumber daya manusia yang profesional dalam bidang Manajemen Sistem Informasi di Indonesia pada tahun 2025.</p>
+                                        <h5>Misi</h5>
+                                        <ol>
+                                            <li>Menyelenggarakan pendidikan yang berkualitas di bidang Manajemen Sistem Informasi berbasis Desktop dan Web sesuai dengan Standar Kerangka Kualifikasi Nasional Indonesia (SKKNI).</li>
+                                            <li>Melaksanakan penelitian dan pengabdian pada masyarakat yang bermanfaat dan relevan dengan bidang manajemen sistem informasi.</li>
+                                            <li>Menjalin kemitraan dan kerjasama dengan dunia usaha dan industri dalam bidang Manajemen Sistem Informasi untuk penguatan lulusan.</li>
+                                        </ol>
+                                    </article>
                                     <img src="images/akred-mif4.jpeg" alt="akred-mif4" />
                                 </div>
                                 <div id="tab15" class="tabcontent">
-                                    <h4>ANALISIS KESEHATAN (AKS) - D3</h4>
-                                    <p>(Terakreditasi “B”)</p>
-                                    <p>Ketua Program Studi : AGUS SUDRAJAT, S.SI., M.T</p>
-                                    <p>Sekertaris Program Studi : ANDINI KUSDIANTINI, S.SI., M.SI</p>
-                                    <h5>Visi</h5>
-                                    <p>Menjadi Program Studi yang Mampu Menghasilkan Lulusan Tenaga Laboratorium Medik Yang Kompeten dan Professional khususnya Parasitologi Klinik Penyakit Tropis di Indonesia pada Tahun 2025.</p>
-                                    <h5>Misi</h5>
-                                    <ol>
-                                        <li>Menyelenggarakan pendidikan berkualitas di bidang Teknologi Laboratorium Medik sesuai dengan Standar Kerangka Kualifikasi Nasional Indonesia (SKKNI).</li>
-                                        <li>Memberikan pembekalan uji kompetensi dalam bidang Teknologi Laboratorium Medik sesuai kebutuhan profesi.</li>
-                                        <li>Melaksanakan penelitian dan pengabdian pada masyarakat yang bermanfaat dan relevan dalam bidang analis kesehatan dan parasitologi klinik penyakit tropis.</li>
-                                        <li>Menjalin kemitraan dan kerjasama dengan sarana pelayanan kesehatan dalam pemenuhan kebutuhan tenaga Teknisi Laboratorium Medik di Indonesia.</li>
-                                    </ol>
+                                    <article>
+                                        <h4>ANALISIS KESEHATAN (AKS) - D3</h4>
+                                        <p>(Terakreditasi “B”)</p>
+                                        <p>Ketua Program Studi : AGUS SUDRAJAT, S.SI., M.T</p>
+                                        <p>Sekertaris Program Studi : ANDINI KUSDIANTINI, S.SI., M.SI</p>
+                                        <h5>Visi</h5>
+                                        <p>Menjadi Program Studi yang Mampu Menghasilkan Lulusan Tenaga Laboratorium Medik Yang Kompeten dan Professional khususnya Parasitologi Klinik Penyakit Tropis di Indonesia pada Tahun 2025.</p>
+                                        <h5>Misi</h5>
+                                        <ol>
+                                            <li>Menyelenggarakan pendidikan berkualitas di bidang Teknologi Laboratorium Medik sesuai dengan Standar Kerangka Kualifikasi Nasional Indonesia (SKKNI).</li>
+                                            <li>Memberikan pembekalan uji kompetensi dalam bidang Teknologi Laboratorium Medik sesuai kebutuhan profesi.</li>
+                                            <li>Melaksanakan penelitian dan pengabdian pada masyarakat yang bermanfaat dan relevan dalam bidang analis kesehatan dan parasitologi klinik penyakit tropis.</li>
+                                            <li>Menjalin kemitraan dan kerjasama dengan sarana pelayanan kesehatan dalam pemenuhan kebutuhan tenaga Teknisi Laboratorium Medik di Indonesia.</li>
+                                        </ol>
+                                    </article>
                                     <img src="images/akred-aks.jpeg" alt="akred-aks" />
                                 </div>
                                 <div id="tab16" class="tabcontent">
-                                    <h4>FARMASI (FAR) - D3</h4>
-                                    <p>(Terakreditasi “C”)</p>
-                                    <p>Ketua Program Studi : APT. MEITI ROSMIATI, S.SI., M.FARM</p>
-                                    <p>Sekretaris Program Studi : APT. KARTIKA SARI, S.FARM., M.FARM</p>
-                                    <h5>Visi</h5>
-                                    <p>Menjadi program studi farmasi unggulan yang menghasilkan tenaga teknis kefarmasian yang profesional di Indonesia pada tahun 2025.</p>
-                                    <h5>Misi</h5>
-                                    <ol>
-                                        <li>Menyelenggarakan pendidikan vokasi bidang farmasi sesuai dengan Standar Kerangkan Kualifikasi Nasional Indonesia (SKKNI) dan Kurikulum Nasional dari Kementerian Kesehatan Republik Indonesia.</li>
-                                        <li>Memberikan uji kompetensi dari APDFI (Asosiasi Perguruan Diploma Farmasi Indonesia) dan PAFI (Persatuan Ahli Farmasi Indonesia).</li>
-                                        <li>Melaksanakan penelitian dan pengabdian pada masyarakat yang bermnfaat dan relevan dengan bidang teknis tenaga kefarmasian.</li>
-                                        <li>Menjalin kemitraan dan kerjasama dengan sarana pelayanan kesehatan dan industri farmasi serta lembaga profesi dalam bidang teknis kefarmasian.</li>
-                                    </ol>
+                                    <article>
+                                        <h4>FARMASI (FAR) - D3</h4>
+                                        <p>(Terakreditasi “C”)</p>
+                                        <p>Ketua Program Studi : APT. MEITI ROSMIATI, S.SI., M.FARM</p>
+                                        <p>Sekretaris Program Studi : APT. KARTIKA SARI, S.FARM., M.FARM</p>
+                                        <h5>Visi</h5>
+                                        <p>Menjadi program studi farmasi unggulan yang menghasilkan tenaga teknis kefarmasian yang profesional di Indonesia pada tahun 2025.</p>
+                                        <h5>Misi</h5>
+                                        <ol>
+                                            <li>Menyelenggarakan pendidikan vokasi bidang farmasi sesuai dengan Standar Kerangkan Kualifikasi Nasional Indonesia (SKKNI) dan Kurikulum Nasional dari Kementerian Kesehatan Republik Indonesia.</li>
+                                            <li>Memberikan uji kompetensi dari APDFI (Asosiasi Perguruan Diploma Farmasi Indonesia) dan PAFI (Persatuan Ahli Farmasi Indonesia).</li>
+                                            <li>Melaksanakan penelitian dan pengabdian pada masyarakat yang bermnfaat dan relevan dengan bidang teknis tenaga kefarmasian.</li>
+                                            <li>Menjalin kemitraan dan kerjasama dengan sarana pelayanan kesehatan dan industri farmasi serta lembaga profesi dalam bidang teknis kefarmasian.</li>
+                                        </ol>
+                                    </article>
                                     <img src="images/akred-far.jpeg" alt="akred-far" />
                                 </div>
                                 <div id="tab17" class="tabcontent">
-                                    <h4>FISIOTERAPI (FIS) - D3</h4>
-                                    <p>(Terakreditasi “C”)</p>
-                                    <p>Ketua Program Studi : IKA RAHMAN, S.FIS., M.KM</p>
-                                    <p>Sekretaris Program Studi : WIWIK RAHAYU, S.FIS</p>
-                                    <h5>Visi</h5>
-                                    <p>Menjadi program studi unggulan yang mampu menghasilkan Sumber Daya Manusia Profesional dalam bidang Fisioterapi Wellness di Indonesia pada tahun 2025.</p>
-                                    <h5>Misi</h5>
-                                    <ol>
-                                        <li>Menyelenggarakan pendidikan fisioterapi wellness yang berkualitas sesuai dengan Standar Kompetensi Kerja Nasional Indonesia (SKKNI) No. 149 Tahun 2018.</li>
-                                        <li>Melaksanakan penelitian dan pengabdian kepada masyarakat yang bermanfaat dan relevan dengan bidang Fisioterapi Wellness.</li>
-                                        <li>Menjalin kemitraan dan kerjasama dengan industri jasa pelayanan kesehatan khususnya dalam bidang Fisioterapi</li>
-                                    </ol>
+                                    <article>
+                                        <h4>FISIOTERAPI (FIS) - D3</h4>
+                                        <p>(Terakreditasi “C”)</p>
+                                        <p>Ketua Program Studi : IKA RAHMAN, S.FIS., M.KM</p>
+                                        <p>Sekretaris Program Studi : WIWIK RAHAYU, S.FIS</p>
+                                        <h5>Visi</h5>
+                                        <p>Menjadi program studi unggulan yang mampu menghasilkan Sumber Daya Manusia Profesional dalam bidang Fisioterapi Wellness di Indonesia pada tahun 2025.</p>
+                                        <h5>Misi</h5>
+                                        <ol>
+                                            <li>Menyelenggarakan pendidikan fisioterapi wellness yang berkualitas sesuai dengan Standar Kompetensi Kerja Nasional Indonesia (SKKNI) No. 149 Tahun 2018.</li>
+                                            <li>Melaksanakan penelitian dan pengabdian kepada masyarakat yang bermanfaat dan relevan dengan bidang Fisioterapi Wellness.</li>
+                                            <li>Menjalin kemitraan dan kerjasama dengan industri jasa pelayanan kesehatan khususnya dalam bidang Fisioterapi</li>
+                                        </ol>
+                                    </article>
                                     <img src="images/akred-fis.jpeg" alt="akred-fis" />
                                 </div>
                                 <div id="tab18" class="tabcontent">
-                                    <h4>MANAJEMEN PELAYANAN RUMAH SAKIT (MPRS) - D3</h4>
-                                    <p>(Terakreditasi “B”)</p>
-                                    <p>Ketua Program Studi : NURUL DWI ARIANI, S.KEP., M.HKES</p>
-                                    <p>Sekretaris Program Studi : SANI FITRIYANI, AMD., ARS., S.KM., M.MRS</p>
-                                    <h5>Visi</h5>
-                                    <p>Menjadi program studi yang menghasilkan sumber daya manusia profesional di bidang Manajemen Pelayanan Rumah Sakit yang mampu berdaya saing di Indonesia pada tahun 2025.</p>
-                                    <h5>Misi</h5>
-                                    <ol>
-                                        <li>Menyelenggarakan pendidikan dalam bidang manajamen pelayanan rumah sakit yang berkualitas sesuai dengan Standar Kualifikasi Nasional Indonesia (SKKNI).</li>
-                                        <li>Melaksanakan penelitian dan pengabdian pada masyarakat yang bermanfaat dan relevan dengan bidang manajemen pelayanan rumah sakit.</li>
-                                        <li>Menjalin kemitraan dan kerjasama dengan sarana pelayanan kesehatan dan dunia profesi kesehatan dalam bidang manajemen pelayanan rumah sakit di Indonesia.</li>
-                                    </ol>
+                                    <article>
+                                        <h4>MANAJEMEN PELAYANAN RUMAH SAKIT (MPRS) - D3</h4>
+                                        <p>(Terakreditasi “B”)</p>
+                                        <p>Ketua Program Studi : NURUL DWI ARIANI, S.KEP., M.HKES</p>
+                                        <p>Sekretaris Program Studi : SANI FITRIYANI, AMD., ARS., S.KM., M.MRS</p>
+                                        <h5>Visi</h5>
+                                        <p>Menjadi program studi yang menghasilkan sumber daya manusia profesional di bidang Manajemen Pelayanan Rumah Sakit yang mampu berdaya saing di Indonesia pada tahun 2025.</p>
+                                        <h5>Misi</h5>
+                                        <ol>
+                                            <li>Menyelenggarakan pendidikan dalam bidang manajamen pelayanan rumah sakit yang berkualitas sesuai dengan Standar Kualifikasi Nasional Indonesia (SKKNI).</li>
+                                            <li>Melaksanakan penelitian dan pengabdian pada masyarakat yang bermanfaat dan relevan dengan bidang manajemen pelayanan rumah sakit.</li>
+                                            <li>Menjalin kemitraan dan kerjasama dengan sarana pelayanan kesehatan dan dunia profesi kesehatan dalam bidang manajemen pelayanan rumah sakit di Indonesia.</li>
+                                        </ol>
+                                    </article>
                                     <img src="images/akred-mprs.jpeg" alt="akred-mprs" />
                                 </div>
                                 <div id="tab19" class="tabcontent">
-                                    <h4>REKAM MEDIS DAN INFORMASI KESEHATAN (RMIK) - D3</h4>
-                                    <p>(Terakreditasi “A”)</p>
-                                    <p>Ketua Program Studi : IRDA SARI, S.ST., M.M</p>
-                                    <p>Sekretaris Program Studi : ANNISA ULFAH, S.TR. KES., M.M</p>
-                                    <h5>Visi</h5>
-                                    <p>Menjadi program studi unggulan yang mampu menghasilkan sumber daya manusia yang profesional dalam bidang Rekam Medis dan Informasi Kesehatan di Indonesia pada tahun 2025.</p>
-                                    <h5>Misi</h5>
-                                    <ol>
-                                        <li>Menyelenggarakan pendidikan dalam bidang Rekam Medis dan Informasi Kesehatan sesuai Standar Kerangka Kualifikasi Nasional Indonesia (SKKNI).</li>
-                                        <li>Memberikan ilmu dan pembekalan tentang pengelolaan administrasi rekam medis, clinical coder (pengkode klinis) yang kompeten.</li>
-                                        <li>Melaksanakan penelitian dan pengabdian kepada masyarakat yang bermanfaat dan relevan dengan bidang Rekam Medis dan Informasi Kesehatan.</li>
-                                        <li>Menjalin kemitraan dan kerja sama dengan sarana pelayanan kesehatan dan lembaga profesi di bidang Rekam Medis dan Informasi Kesehatan untuk penguatan kualitas lulusan.</li>
-                                    </ol>
+                                    <article>
+                                        <h4>REKAM MEDIS DAN INFORMASI KESEHATAN (RMIK) - D3</h4>
+                                        <p>(Terakreditasi “A”)</p>
+                                        <p>Ketua Program Studi : IRDA SARI, S.ST., M.M</p>
+                                        <p>Sekretaris Program Studi : ANNISA ULFAH, S.TR. KES., M.M</p>
+                                        <h5>Visi</h5>
+                                        <p>Menjadi program studi unggulan yang mampu menghasilkan sumber daya manusia yang profesional dalam bidang Rekam Medis dan Informasi Kesehatan di Indonesia pada tahun 2025.</p>
+                                        <h5>Misi</h5>
+                                        <ol>
+                                            <li>Menyelenggarakan pendidikan dalam bidang Rekam Medis dan Informasi Kesehatan sesuai Standar Kerangka Kualifikasi Nasional Indonesia (SKKNI).</li>
+                                            <li>Memberikan ilmu dan pembekalan tentang pengelolaan administrasi rekam medis, clinical coder (pengkode klinis) yang kompeten.</li>
+                                            <li>Melaksanakan penelitian dan pengabdian kepada masyarakat yang bermanfaat dan relevan dengan bidang Rekam Medis dan Informasi Kesehatan.</li>
+                                            <li>Menjalin kemitraan dan kerja sama dengan sarana pelayanan kesehatan dan lembaga profesi di bidang Rekam Medis dan Informasi Kesehatan untuk penguatan kualitas lulusan.</li>
+                                        </ol>
+                                    </article>
                                     <img src="images/akred-rmik.jpeg" alt="akred-rmik" />
                                 </div>
                                 <div id="tab20" class="tabcontent">
-                                    <h4>MANAJEMEN INFORMASI KESEHATAN (MIK) - D4</h4>
-                                    <p>Ketua Program Studi : YUDA SYAHIDIN, S.ST., M.KOM., MTA., CPDSA.</p>
-                                    <p>Sekretaris Program Studi : YUYUN YUNENGSIH, S.ST., M.M</p>
-                                    <h5>Visi</h5>
-                                    <p>
-                                        Menjadi program studi unggulan di Indonesia dalam Pengolahan Data Rekam Medis Berbasis Teknologi Informasi Guna Mendukung Tata Kelola Klinis Yang Baik (Good Clinical Governance) untuk Pengambilan Keputusan Yang
-                                        Benar, Cepat, Tepat dan Akurat
-                                    </p>
-                                    <h5>Misi</h5>
-                                    <ol>
-                                        <li>Menyelenggarakan pendidikan Sarjana Terapan Manajemen Informasi Kesehatan sesuai Standar Kerangka Kualifikasi Nasional Indonesia (SKKNI) dan profesi rekam medis berbasis teknologi informasi kesehatan.</li>
-                                        <li>Melaksanakan penelitian dan pengabdian pada masyarakat yang berdayaguna dalam bidang manajemen informasi kesehatan dengan tata kelola klinik yang baik (good clinical governance).</li>
-                                        <li>Menjalin kemitraan dan kerjasama dengan sarana pelayanan kesehatan dalam peningkatan mutu pendidikan dan pengguna lulusan sarjana terapan manajemen informasi kesehatan.</li>
-                                    </ol>
+                                    <article>
+                                        <h4>MANAJEMEN INFORMASI KESEHATAN (MIK) - D4</h4>
+                                        <p>Ketua Program Studi : YUDA SYAHIDIN, S.ST., M.KOM., MTA., CPDSA.</p>
+                                        <p>Sekretaris Program Studi : YUYUN YUNENGSIH, S.ST., M.M</p>
+                                        <h5>Visi</h5>
+                                        <p>
+                                            Menjadi program studi unggulan di Indonesia dalam Pengolahan Data Rekam Medis Berbasis Teknologi Informasi Guna Mendukung Tata Kelola Klinis Yang Baik (Good Clinical Governance) untuk Pengambilan Keputusan
+                                            Yang Benar, Cepat, Tepat dan Akurat
+                                        </p>
+                                        <h5>Misi</h5>
+                                        <ol>
+                                            <li>
+                                                Menyelenggarakan pendidikan Sarjana Terapan Manajemen Informasi Kesehatan sesuai Standar Kerangka Kualifikasi Nasional Indonesia (SKKNI) dan profesi rekam medis berbasis teknologi informasi kesehatan.
+                                            </li>
+                                            <li>Melaksanakan penelitian dan pengabdian pada masyarakat yang berdayaguna dalam bidang manajemen informasi kesehatan dengan tata kelola klinik yang baik (good clinical governance).</li>
+                                            <li>Menjalin kemitraan dan kerjasama dengan sarana pelayanan kesehatan dalam peningkatan mutu pendidikan dan pengguna lulusan sarjana terapan manajemen informasi kesehatan.</li>
+                                        </ol>
+                                    </article>
                                 </div>
                             </div>
                         </div>
 
                         <div id="lain2">
-                            <h2>INFORMASI LAINNYA POLITEKNIK PIKSI GANESHA BANDUNG</h2>
-                            <p>Berikut informasi lainnya dari Politeknik Piksi Ganesha yang bisa tersampaikan, berdasarkan akses informasi laman resmi Politeknik Piksi Ganesha Bandung.</p>
+                            <article>
+                                <h2>INFORMASI LAINNYA POLITEKNIK PIKSI GANESHA BANDUNG</h2>
+                                <p>Berikut informasi lainnya dari Politeknik Piksi Ganesha yang bisa tersampaikan, berdasarkan akses informasi laman resmi Politeknik Piksi Ganesha Bandung.</p>
+                            </article>
                             <div class="tab-active">
                                 <div class="tab">
                                     <button class="tablinks" onclick="openTab(event, 'tab21')">DOSEN</button>
@@ -467,56 +526,68 @@
                                     <button class="tablinks" onclick="openTab(event, 'tab26')">NILAI</button>
                                 </div>
                                 <div id="tab21" class="tabcontent">
-                                    <h4>INFORMASI DOSEN</h4>
-                                    <p>
-                                        Butuh informasi tentang Dosen, <span><a href="https://www.piksi.ac.id/?page_id=2524" target="_blank" rel="noopener noreferrer">mampir kesini!</a> </span>
-                                    </p>
+                                    <article>
+                                        <h4>INFORMASI DOSEN</h4>
+                                        <p>
+                                            Butuh informasi tentang Dosen, <span><a href="https://www.piksi.ac.id/?page_id=2524" target="_blank" rel="noopener noreferrer">mampir kesini!</a> </span>
+                                        </p>
+                                    </article>
                                 </div>
                                 <div id="tab22" class="tabcontent">
-                                    <h4>KURIKULUM</h4>
-                                    <div id="kurikulum">
-                                        <div class="ekbis">
-                                            <p>
-                                                Mahasiswa Fakultas Ekonomi dan Bisnis? <span><a href="https://www.piksi.ac.id/?page_id=2465" target="_blank" rel="noopener noreferrer">mampir kesini!</a> </span>
-                                            </p>
+                                    <article>
+                                        <h4>KURIKULUM</h4>
+                                        <div id="kurikulum">
+                                            <div class="ekbis">
+                                                <p>
+                                                    Mahasiswa Fakultas Ekonomi dan Bisnis? <span><a href="https://www.piksi.ac.id/?page_id=2465" target="_blank" rel="noopener noreferrer">mampir kesini!</a> </span>
+                                                </p>
+                                            </div>
+                                            <div class="it">
+                                                <p>
+                                                    Mahasiswa Fakultas IT dan Komputer? <span><a href="https://www.piksi.ac.id/?page_id=2312" target="_blank" rel="noopener noreferrer">mampir kesini!</a> </span>
+                                                </p>
+                                            </div>
+                                            <div class="kesehatan">
+                                                <p>
+                                                    Mahasiswa Fakultas Kesehatan? <span><a href="https://www.piksi.ac.id/?page_id=2477" target="_blank" rel="noopener noreferrer">mampir kesini!</a> </span>
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="it">
-                                            <p>
-                                                Mahasiswa Fakultas IT dan Komputer? <span><a href="https://www.piksi.ac.id/?page_id=2312" target="_blank" rel="noopener noreferrer">mampir kesini!</a> </span>
-                                            </p>
-                                        </div>
-                                        <div class="kesehatan">
-                                            <p>
-                                                Mahasiswa Fakultas Kesehatan? <span><a href="https://www.piksi.ac.id/?page_id=2477" target="_blank" rel="noopener noreferrer">mampir kesini!</a> </span>
-                                            </p>
-                                        </div>
-                                    </div>
+                                    </article>
                                 </div>
                                 <div id="tab23" class="tabcontent">
-                                    <h4>KALENDER AKADEMIK</h4>
-                                    <p>
-                                        Butuh informasi kalender akademik? <span><a href="https://www.piksi.ac.id/?page_id=4887" target="_blank" rel="noopener noreferrer">mampir kesini!</a> </span>
-                                    </p>
+                                    <article>
+                                        <h4>KALENDER AKADEMIK</h4>
+                                        <p>
+                                            Butuh informasi kalender akademik? <span><a href="https://www.piksi.ac.id/?page_id=4887" target="_blank" rel="noopener noreferrer">mampir kesini!</a> </span>
+                                        </p>
+                                    </article>
                                 </div>
                                 <div id="tab24" class="tabcontent">
-                                    <h4>INFORMASI BAPS</h4>
-                                    <p>Bagi mahasiswa yang mengalami kendala dapat menghubungi Admin BAPS berikut:</p>
-                                    <img src="images/baps.jpeg" alt="baps-info" />
-                                    <p>
-                                        Atau bisa berkunjung, <span><a href="https://www.piksi.ac.id/?page_id=3513" target="_blank" rel="noopener noreferrer">kesini!</a> </span>
-                                    </p>
+                                    <article>
+                                        <h4>INFORMASI BAPS</h4>
+                                        <p>Bagi mahasiswa yang mengalami kendala dapat menghubungi Admin BAPS berikut:</p>
+                                        <img src="images/baps.jpeg" alt="baps-info" />
+                                        <p>
+                                            Atau bisa berkunjung, <span><a href="https://www.piksi.ac.id/?page_id=3513" target="_blank" rel="noopener noreferrer">kesini!</a> </span>
+                                        </p>
+                                    </article>
                                 </div>
                                 <div id="tab25" class="tabcontent">
-                                    <h4>PEDOMAN</h4>
-                                    <p>
-                                        Informasi tentang Pedoman, dapat diakses <span><a href="https://www.piksi.ac.id/?page_id=3147" target="_blank" rel="noopener noreferrer">disini!</a> </span>
-                                    </p>
+                                    <article>
+                                        <h4>PEDOMAN</h4>
+                                        <p>
+                                            Informasi tentang Pedoman, dapat diakses <span><a href="https://www.piksi.ac.id/?page_id=3147" target="_blank" rel="noopener noreferrer">disini!</a> </span>
+                                        </p>
+                                    </article>
                                 </div>
                                 <div id="tab26" class="tabcontent">
-                                    <h4>NILAI ONLINE</h4>
-                                    <p>
-                                        Informasi nilai mahasiswa, dapat diakses <span><a href="https://mahasiswa.piksi.ac.id/" target="_blank" rel="noopener noreferrer">disini!</a> </span>
-                                    </p>
+                                    <article>
+                                        <h4>NILAI ONLINE</h4>
+                                        <p>
+                                            Informasi nilai mahasiswa, dapat diakses <span><a href="https://mahasiswa.piksi.ac.id/" target="_blank" rel="noopener noreferrer">disini!</a> </span>
+                                        </p>
+                                    </article>
                                 </div>
                             </div>
                         </div>
@@ -539,12 +610,12 @@
                                             <img src="images/sam.jpg" alt="fotoProgrammer" srcset="" />
                                         </div>
                                         <p>
-                                            Mempunyai nama lengkap Osama, rekan-rekannya banyak memanggil "sam". Lahir dan besar di Provinsi Sumatera Selatan (Sum-Sel), lebih tepatnya di Kabupaten Musi Rawas (MURA/Kota Lubuklinggau) - yang sekarang
-                                            sudah meng-otonomi-kan diri menjadi Kabupaten Musi Rawas Utara (Muratara). Tak banyak hal yang harus dijabarkan disini, untuk lebih detail sepertinya kita bisa ketemu dan mengobrol langsung bukan?
+                                            Mempunyai nama lengkap Osama, rekan-rekannya banyak memanggil "sam". Tahun 2019 mulai masuk kuliah di Politeknik Piksi Ganesha Bandung dan memilih program studi D3 Teknik Komputer [19304044] - yang sekarang
+                                            lanjut ke program studi D4 Manajemen Informatika [522402049]. Tak banyak hal yang harus dijabarkan disini, untuk lebih detail sepertinya kita bisa ketemu dan mengobrol langsung, bukan?
                                         </p>
                                         <p>
-                                            Sumber data yang berisi di website ini merupakan data yang diambil dari laman resmi <a href="https://www.piksi.ac.id/" target="_blank" rel="noopener noreferrer">Politeknik Piksi Ganesha Bandung</a> dan jika ada kesalahan ataupun kekurangan mohon untuk di koreksi dan di
-                                            maklumi.
+                                            Sumber data yang berisi di website ini merupakan data yang diambil dari laman resmi <a href="https://www.piksi.ac.id/" target="_blank" rel="noopener noreferrer">Politeknik Piksi Ganesha Bandung</a> dan jika
+                                            ada kesalahan ataupun kekurangan mohon untuk di koreksi dan di maklumi.
                                         </p>
                                         <p>
                                             Temukan saya:
@@ -564,6 +635,11 @@
                                     </div>
                                 </aside>
                             </div>
+                        </div>
+                        <div class="source">
+                            <marquee behavior="scroll" direction="left"
+                                ><span><img src="images/icon/megaphone.png" alt="" srcset="" /></span> sumber: <a href="https://www.piksi.ac.id/" target="_blank" rel="noopener noreferrer">Politeknik Piksi Ganesha Bandung</a></marquee
+                            >
                         </div>
                     </div>
                 </main>
